@@ -1,0 +1,116 @@
+<mvc:View
+	controllerName="sap.ui.demo.wt.controller.App"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<Button
+		icon="sap-icon://action-settings"
+        text="{i18n>openDialogButtonText}"
+        press="onOpenDialog"
+        class="sapUiSmallMarginEnd"/>
+
+	<VBox
+		class="sapUiSmallMargin">
+
+		<NavContainer
+			id="navCon"
+			width="98%"
+			height="40em"
+			class="navContainerControl sapUiSmallMarginBottom">
+			<Page
+				id="Gas"
+				title="Gas" >
+				<!--This is the nested view-->
+				<mvc:XMLView viewName="sap.ui.demo.wt.view.Gas"/>
+				<footer><Toolbar><Button text="Action 1" /></Toolbar></footer>
+			</Page>
+			<Page
+				id="Water"
+				title="Water" >
+				<footer><Toolbar><Button text="Action 2" /></Toolbar></footer>
+			</Page>
+			<Page
+				id="p3"
+				title="Page 3" >
+				<footer><Toolbar><Button text="Action 3" /></Toolbar></footer>
+			</Page>
+			<Page
+				id="p4"
+				title="Page 4" >
+				<footer><Toolbar><Button text="Action 4" /></Toolbar></footer>
+			</Page>
+		</NavContainer>
+
+		<HBox>
+			<Button
+				text="Gas"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="Gas" />
+				</customData>
+			</Button>
+			<Button
+				text="Water"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="Water" />
+				</customData>
+			</Button>
+			<Button
+				text="To 3"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p3" />
+				</customData>
+			</Button>
+			<Button
+				text="To 4"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="p4" />
+				</customData>
+			</Button>
+		</HBox>
+
+		<HBox>
+			<Button
+				text="Back"
+				type="Back"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</Button>
+			<!--<Select id="animationSelect">-->
+			<!--	<core:Item text="Slide animation" key="slide" />-->
+			<!--	<core:Item text="Fade animation" key="fade" />-->
+			<!--	<core:Item text="Flip animation" key="flip" />-->
+			<!--	<core:Item text="Show animation" key="show" />-->
+			<!--	<layoutData>-->
+			<!--		<FlexItemData growFactor="1" />-->
+			<!--	</layoutData>-->
+			<!--</Select>-->
+		</HBox>
+
+	</VBox>
+</mvc:View>
