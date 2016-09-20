@@ -1,50 +1,18 @@
-<mvc:View
-	controllerName="sap.ui.demo.wt.controller.Gas"
-	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+<core:View controllerName="sap.ui.demo.MockServer.controller.Gas" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m">
 	<Switch id="showHideHeaderSwitch"
 		state="true"
 		class="sapUiSmallMarginBottom"
 		change="onHeaderSwitchChange">
 	</Switch>
-	<List
-		id="invoiceList"
-		class="sapUiResponsiveMargin"
-		width="auto"
-		items="{
-			path : 'invoice>/Invoices',
-			sorter : {
-				path : 'ShipperName',
-				group : true
-			}
-		}">
-		<headerToolbar>
-			<Toolbar>
-				<Title text="{i18n>invoiceListTitle}" />
-				<!--<ToolbarSpacer />-->
-				<!--<SearchField width="50%" search="onFilterInvoices" selectOnFocus="false"/>-->
-			</Toolbar>
-		
-		</headerToolbar>
+	<List headerText="{i18n>headerText}" id="list" items="{/Meetups}" noDataText="{i18n>noDataText}">
 		<items>
-			<ObjectListItem
-				title="{invoice>Quantity} x {invoice>ProductName}"
-				number="{
-					parts: [{path: 'invoice>ExtendedPrice'}, {path: 'view>/currency'}],
-					type: 'sap.ui.model.type.Currency',
-					formatOptions: {
-						showMeasure: false
-					}
-				}"
-				numberUnit="{view>/currency}"
-				numberState="{=	${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }">
-				<firstStatus>
-					<ObjectStatus text="{
-						path: 'invoice>Status',
-						formatter: '.formatter.statusText'
-					}"/>
-				</firstStatus>
+			<ObjectListItem number="{ path: 'EventDate', type: 'sap.ui.model.type.DateTime', formatOptions: { style: 'medium' } }" title="{Title}">
+				<attributes>
+					<ObjectAttribute text="{Description}"/>
+				</attributes>
 			</ObjectListItem>
 		</items>
 	</List>
-</mvc:View>
+	<Button press="onPressAction" text="{i18n>loadFirstItems}"></Button>
+</core:View>

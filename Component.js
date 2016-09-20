@@ -1,33 +1,22 @@
 sap.ui.define([
-	"sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel",
-	"sap/ui/demo/wt/controller/HelloDialog"
-], function (UIComponent, JSONModel, HelloDialog) {
+	"sap/ui/core/UIComponent"
+], function(UIComponent) {
 	"use strict";
 
-	return UIComponent.extend("sap.ui.demo.wt.Component", {
+	return UIComponent.extend("sap.ui.demo.MockServer.Component", {
 
-		metadata : {
+		metadata: {
 			manifest: "json"
 		},
 
-		init : function () {
-
-			// call the init function of the parent
+		/**
+		 * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
+		 * @public
+		 * @override
+		 */
+		init: function() {
+			// call the base component's init function
 			UIComponent.prototype.init.apply(this, arguments);
-
-			// set data model
-			var oData = {
-				recipient : {
-					name : "Bill"
-				}
-			};
-			var oModel = new JSONModel(oData);
-			this.setModel(oModel);
-
-			// set dialog
-			this.helloDialog = new HelloDialog();
 		}
 	});
-
 });

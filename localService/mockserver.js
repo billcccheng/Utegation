@@ -1,32 +1,33 @@
 sap.ui.define([
 	"sap/ui/core/util/MockServer"
-], function (MockServer) {
+], function(MockServer) {
 	"use strict";
 
 	return {
-
-		init: function () {
-
+		/**
+		 * Initializes the mock server.
+		 * You can configure the delay with the URL parameter "serverDelay".
+		 * The local mock data in this folder is returned instead of the real data for testing.
+		 * @public
+		 */
+		init: function() {
 			// create
 			var oMockServer = new MockServer({
-				rootUri: "/destinations/northwind/V2/Northwind/Northwind.svc/"
+				rootUri: "/"
 			});
 
-			var oUriParameters = jQuery.sap.getUriParameters();
-
-			// configure mock server with a delay
-			MockServer.config({
-				autoRespond: true,
-				autoRespondAfter: oUriParameters.get("serverDelay") || 1000
+			// simulate against the metadata and mock data
+			oMockServer.simulate("../localService/metadata.xml", {
+				sMockdataBaseUrl: "../localService/mockdata",
+				bGenerateMissingMockData: true
 			});
-
-			// simulate
-			var sPath = jQuery.sap.getModulePath("sap.ui.demo.wt.localService");
-			oMockServer.simulate(sPath + "/metadata.xml", sPath + "/mockdata");
 
 			// start
 			oMockServer.start();
+
+			jQuery.sap.log.info("Running the app with mock data");
 		}
+
 	};
 
 });
