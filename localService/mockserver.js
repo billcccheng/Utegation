@@ -15,6 +15,12 @@ sap.ui.define([
 			var oMockServer = new MockServer({
 				rootUri: "/"
 			});
+			
+			var oUriParameters = jQuery.sap.getUriParameters();
+			MockServer.config({
+				autoRespond: true,
+				autoRespondAfter: oUriParameters.get("serverDelay") || 1000
+			});
 
 			// simulate against the metadata and mock data
 			oMockServer.simulate("../localService/metadata.xml", {

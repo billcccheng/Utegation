@@ -9,13 +9,15 @@
             xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
             <EntityType Name="Meetup">
                 <Key>
-                    <PropertyRef Name="MeetupID" />
+                    <PropertyRef Name="UtilityID" />
                 </Key>
-                <Property Name="MeetupID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="UtilityID" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Title" Type="Edm.String" Nullable="true" />
-                <Property Name="EventDate" Type="Edm.DateTime" Nullable="false" />
-                <Property Name="ContactPhone" Type="Edm.String" Nullable="true" />
+                <Property Name="PaperLess" Type="Edm.boolean" Nullable="false" />
                 <Property Name="Description" Type="Edm.String" Nullable="true" />
+                <!--<Property Name="Title" Type="Edm.String" Nullable="true" />-->
+                <!--<Property Name="EventDate" Type="Edm.DateTime" Nullable="false" />-->
+                <!--<Property Name="ContactPhone" Type="Edm.String" Nullable="true" />-->
                 <!--<Property Name="HostedBy" Type="Edm.String" Nullable="true" />-->
                 <!--<Property Name="Address" Type="Edm.String" Nullable="true" />-->
                 <!--<Property Name="Country" Type="Edm.String" Nullable="true" />-->

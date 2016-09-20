@@ -1,6 +1,7 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
+	"../Formatter/Formatter",
 ], function(Controller, MessageToast) {
 	"use strict";
 
@@ -11,6 +12,7 @@ sap.ui.define([
 		 * We pass a custom URL parameter "first=3" (assuming our OData BE knows how to process it).
 		 */
 		 
+		
 		onPressAction: function() {
 			var oList = this.getView().byId("list");
 			oList.bindItems({
@@ -43,6 +45,10 @@ sap.ui.define([
 		onHeaderSwitchChange: function (evt) {
 			MessageToast.show("Testing");
 		},
+		
+		onListItemPress: function (evt) {
+			MessageToast.show("Pressed : " + evt.getSource().getTitle());
+		}
 	});
 
 });
