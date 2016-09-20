@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.ui.demo.MockServer.controller.App"
+	controllerName="sap.ui.utegation.controller.App"
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
@@ -21,7 +21,7 @@
 				id="Gas"
 				title="Gas" >
 				<!--This is the nested view-->
-				<mvc:XMLView viewName="sap.ui.demo.MockServer.view.Gas"/>
+				<mvc:XMLView viewName="sap.ui.utegation.view.Gas"/>
 				<footer><Toolbar><Button text="Action 1" /></Toolbar></footer>
 			</Page>
 			<Page
@@ -30,13 +30,13 @@
 				<footer><Toolbar><Button text="Action 2" /></Toolbar></footer>
 			</Page>
 			<Page
-				id="p3"
-				title="Page 3" >
+				id="Electricity"
+				title="Electricity" >
 				<footer><Toolbar><Button text="Action 3" /></Toolbar></footer>
 			</Page>
 			<Page
-				id="p4"
-				title="Page 4" >
+				id="Contacting_Preference"
+				title="Contacting Preference" >
 				<footer><Toolbar><Button text="Action 4" /></Toolbar></footer>
 			</Page>
 		</NavContainer>
@@ -67,7 +67,7 @@
 				</customData>
 			</Button>
 			<Button
-				text="To 3"
+				text="Electricity"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -75,11 +75,11 @@
 				<customData>
 					<core:CustomData
 						key="target"
-						value="p3" />
+						value="Electricity" />
 				</customData>
 			</Button>
 			<Button
-				text="To 4"
+				text="Contacting Preference"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -87,7 +87,7 @@
 				<customData>
 					<core:CustomData
 						key="target"
-						value="p4" />
+						value="Contacting_Preference" />
 				</customData>
 			</Button>
 		</HBox>

@@ -4,16 +4,17 @@ sap.ui.define([
 ], function(Controller, MessageToast) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.MockServer.controller.Gas", {
+	return Controller.extend("sap.ui.utegation.controller.Gas", {
 		/**
 		 * Responds to the button press event.
 		 * Upon pressing, we bind the items aggregation of the list to the "Meetups" entityset.
 		 * We pass a custom URL parameter "first=3" (assuming our OData BE knows how to process it).
 		 */
+		 
 		onPressAction: function() {
 			var oList = this.getView().byId("list");
 			oList.bindItems({
-				path: "/Meetups",
+				path: "/data", //this reads mockdata/data.json
 				parameters: {
 					custom: {
 						first: "3"
@@ -30,7 +31,10 @@ sap.ui.define([
 					},
 					attributes: [
 						new sap.m.ObjectAttribute({
-							text: "{Description}"
+							text: "{Description}",
+						}),
+						new sap.m.ObjectAttribute({
+							text: "{ContactPhone}",
 						})
 					]
 				})

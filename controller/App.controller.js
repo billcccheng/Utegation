@@ -5,7 +5,7 @@ sap.ui.define([
 	"sap/ui/model/resource/ResourceModel"
 ],function(MessageToast, Controller, JSONModel, ResourceModel) {
 	"use strict";
-	var CController = Controller.extend("sap.ui.demo.MockServer.controller.App", {
+	var CController = Controller.extend("sap.ui.utegation.controller.App", {
 		
 		handleNav: function(evt) {
 			var navCon = this.getView().byId("navCon");
@@ -20,18 +20,18 @@ sap.ui.define([
 			}
 		},
 		_getDialog : function () {
-	         if (!this._oDialog) {
-	            this._oDialog = sap.ui.xmlfragment("sap.ui.demo.MockServer.view.Setting", this);
+	        if (!this._oDialog) {
+	            this._oDialog = sap.ui.xmlfragment("sap.ui.utegation.view.Setting", this);
 	            this.getView().addDependent(this._oDialog);
-	         }
+			}
 	         return this._oDialog;
-	      },
-	      onOpenDialog : function () {
-	         this._getDialog().open();
-	      },
-	      onCloseDialog : function () {
-	         this._getDialog().close();
-	      }
+	     },
+	     onOpenDialog : function () {
+	    	this._getDialog().open();
+	    },
+	    onCloseDialog : function () {
+	    	this._getDialog().close();
+		}
 	});
 
 

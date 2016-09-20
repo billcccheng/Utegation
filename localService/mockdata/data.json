@@ -2,6 +2,7 @@
 	"MeetupID": 1,
 	"Title": "Toronto Tech Meet-Up",
 	"EventDate": "/Date(1278450000000)/",
+	"ContactPhone":"1234567",
 	"Description": "The best way to expand your knowledge and network of the Toronto technology community"
 }, {
 	"MeetupID": 2,

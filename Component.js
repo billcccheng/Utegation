@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(UIComponent) {
 	"use strict";
 
-	return UIComponent.extend("sap.ui.demo.MockServer.Component", {
+	return UIComponent.extend("sap.ui.utegation.Component", {
 
 		metadata: {
 			manifest: "json"

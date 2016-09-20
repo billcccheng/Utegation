@@ -14,19 +14,19 @@
                 <Property Name="MeetupID" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Title" Type="Edm.String" Nullable="true" />
                 <Property Name="EventDate" Type="Edm.DateTime" Nullable="false" />
-                <Property Name="Description" Type="Edm.String" Nullable="true" />
-                <Property Name="HostedBy" Type="Edm.String" Nullable="true" />
                 <Property Name="ContactPhone" Type="Edm.String" Nullable="true" />
-                <Property Name="Address" Type="Edm.String" Nullable="true" />
-                <Property Name="Country" Type="Edm.String" Nullable="true" />
-                <Property Name="Latitude" Type="Edm.Double" Nullable="false" />
-                <Property Name="Longitude" Type="Edm.Double" Nullable="false" />
-                <Property Name="HostedById" Type="Edm.String" Nullable="true" />
-                <Property Name="Location" Type="NerdMeetup.Models.LocationDetail" Nullable="false" />
+                <Property Name="Description" Type="Edm.String" Nullable="true" />
+                <!--<Property Name="HostedBy" Type="Edm.String" Nullable="true" />-->
+                <!--<Property Name="Address" Type="Edm.String" Nullable="true" />-->
+                <!--<Property Name="Country" Type="Edm.String" Nullable="true" />-->
+                <!--<Property Name="Latitude" Type="Edm.Double" Nullable="false" />-->
+                <!--<Property Name="Longitude" Type="Edm.Double" Nullable="false" />-->
+                <!--<Property Name="HostedById" Type="Edm.String" Nullable="true" />-->
+                <!--<Property Name="Location" Type="NerdMeetup.Models.LocationDetail" Nullable="false" />-->
             </EntityType>
             <ComplexType Name="LocationDetail" />
             <EntityContainer Name="NerdMeetups" m:IsDefaultEntityContainer="true">
-                <EntitySet Name="Meetups" EntityType="NerdMeetup.Models.Meetup" />
+                <EntitySet Name="data" EntityType="NerdMeetup.Models.Meetup" />
                 <FunctionImport Name="FindUpcomingMeetups" EntitySet="Meetups" ReturnType="Collection(NerdMeetup.Models.Meetup)" m:HttpMethod="GET" />
             </EntityContainer>
         </Schema>
