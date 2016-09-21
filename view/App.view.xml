@@ -21,7 +21,11 @@
 				id="Gas"
 				title="Gas" >
 				<mvc:XMLView viewName="sap.ui.utegation.view.Gas"/>
-				<footer><Toolbar><Button text="Action 1" /></Toolbar></footer>
+				<footer><Toolbar><Button
+									icon="sap-icon://simple-payment"
+							        text="Payment"
+							        press="onOpenGasPayment"
+							        class="sapUiSmallMarginEnd"/></Toolbar></footer>
 			</Page>
 			<Page
 				id="Water"

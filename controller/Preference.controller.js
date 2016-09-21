@@ -43,7 +43,7 @@ sap.ui.define([
 			});
 		},
 		onHeaderSwitchChange: function (evt) {
-			MessageToast.show("Testing");
+			MessageToast.show("Saved");
 		},
 		
 		onListItemPress: function (evt) {

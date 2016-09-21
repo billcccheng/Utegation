@@ -1,73 +1,11 @@
-<!--<core:View controllerName="sap.ui.utegation.controller.Gas" xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"-->
-<!--	xmlns="sap.m">-->
-	<!--<Switch id="showHideHeaderSwitch"-->
-	<!--	state="true"-->
-	<!--	class="sapUiSmallMarginBottom"-->
-	<!--	change="onHeaderSwitchChange">-->
-	<!--</Switch>-->
-	
-<!--	<Table-->
-<!--	    <columns>-->
-<!--	      <Column-->
-<!--	        width="12em">-->
-<!--	        <Text text="Product" />-->
-<!--	      </Column>-->
-<!--	       <Column-->
-<!--	        minScreenWidth="Tablet"-->
-<!--	        demandPopin="true">-->
-<!--	        <Text text="Supplier" />-->
-<!--	      </Column>-->
-<!--	    </columns>-->
-	
-	
-<!--		<items>-->
-<!--	      <ColumnListItem>-->
-<!--	        <cells>-->
-<!--	          <ObjectIdentifier-->
-<!--	            title="{Title}"-->
-<!--	            text="{PaperLess}"-->
-<!--	            class="sapMTableContentMargin" />-->
-<!--	          <Text-->
-<!--	            text="{Description}" />-->
-<!--	        </cells>-->
-<!--	      </ColumnListItem>-->
-<!--	    </items>-->
-<!--	  </Table>-->
-
-<!--</core:View>-->
-
-<!--<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.utegation.controller.Gas">-->
-<!--  <List headerText="{i18n>headerText}" id="list" items="{/data}" noDataText="{i18n>noDataText}">-->
-<!--    <Panel headerText="{/panelHeaderText}" class="sapUiResponsiveMargin" width="auto">-->
-<!--      <content>-->
-<!--        <Label text="AA" class="sapUiSmallMargin" />-->
-<!--        <Text text = "{title}"/>-->
-<!--      </content>-->
-<!--      <Switch id="showHideHeaderSwitch"-->
-<!--    		state="true"-->
-<!--    		class="sapUiSmallMarginBottom"-->
-<!--    		change="onHeaderSwitchChange">-->
-<!--    	</Switch>-->
-<!--    </Panel>-->
-<!--  </List>-->
-<!--</mvc:View>-->
-
-
-
 <core:View controllerName="sap.ui.utegation.controller.Preference"
   xmlns:core="sap.ui.core" 
   xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns="sap.m"
 	xmlns:l="sap.ui.layout">
-	<!--<Switch id="showHideHeaderSwitch"-->
-	<!--	state="true"-->
-	<!--	class="sapUiSmallMarginBottom"-->
-	<!--	change="onHeaderSwitchChange">-->
-	<!--</Switch>-->
-	<List headerText="{i18n>OverviewText}" id="list" items="{/data}" noDataText="{i18n>noDataText}">
-	  <!--<InputListItem label="WLAN">-->
-			<!--  <Switch state="true" />-->
-		 <!-- </InputListItem>-->
+
+	<List headerText="{i18n>OverviewText}" id="list" items="{/gasData}" noDataText="{i18n>noDataText}">
+
 		
 		<items>
 			<ObjectListItem 

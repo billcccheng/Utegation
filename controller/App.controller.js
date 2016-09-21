@@ -26,12 +26,15 @@ sap.ui.define([
 			}
 	         return this._oDialog;
 	     },
-	     onOpenDialog : function () {
+	    onOpenDialog : function () {
 	    	this._getDialog().open();
 	    },
 	    onCloseDialog : function () {
 	    	this._getDialog().close();
 		}
+		
+
+		
 	});
 
 

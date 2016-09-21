@@ -1,13 +1,24 @@
-<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="sap.ui.utegation.controller.Preference">
-    <Panel headerText="{i18n>GasHeader}" class="sapUiResponsiveMargin" width="auto">
-      <content>
-        <Label text="PaperLess" class="sapUiSmallMargin" />
-        <Text text = "{title}"/>
-      </content>
-        <Switch id="showHideHeaderSwitch"
-    		state="true"
-    		class="sapUiSmallMarginBottom"
-    		change="onHeaderSwitchChange">
-        </Switch>
-    </Panel>
+<mvc:View 
+  controllerName="sap.ui.utegation.controller.Preference"
+  xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <List headerText="{i18n>GasHeader}" >
+  		<InputListItem label="PaperLess">
+  			 <Switch id="showHidePaperLessSwitch"
+      		state="true"
+      		change="onHeaderSwitchChange"/>
+  		</InputListItem>
+  		<InputListItem label="Email">
+  			 <Switch id="showHideEmailSwitch"
+      		state="true"
+      		change="onHeaderSwitchChange"/>
+  		</InputListItem>
+  		<InputListItem label="Phone">
+  			 <Switch id="showHidePhoneSwitch"
+      		state="true"
+      		change="onHeaderSwitchChange"/>
+  		</InputListItem>
+  	</List>
 </mvc:View>

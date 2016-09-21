@@ -28,7 +28,7 @@
             </EntityType>
             <ComplexType Name="LocationDetail" />
             <EntityContainer Name="NerdMeetups" m:IsDefaultEntityContainer="true">
-                <EntitySet Name="data" EntityType="NerdMeetup.Models.Meetup" />
+                <EntitySet Name="gasData" EntityType="NerdMeetup.Models.Meetup" />
                 <FunctionImport Name="FindUpcomingMeetups" EntitySet="Meetups" ReturnType="Collection(NerdMeetup.Models.Meetup)" m:HttpMethod="GET" />
             </EntityContainer>
         </Schema>
