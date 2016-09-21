@@ -7,13 +7,23 @@ sap.ui.define([
 	"use strict";
 	var CController = Controller.extend("sap.ui.utegation.controller.App", {
 		
+		// onInit : function () {
+  //       // set data model on view
+  //      	var oData = {
+  //          	recipient : {
+  //          		name : "Bill"
+  //          	}
+  //      	};
+	 //       var oModel = new JSONModel(oData);
+	 //       this.getView().setModel(oModel);
+		// },
+		
+		
 		handleNav: function(evt) {
 			var navCon = this.getView().byId("navCon");
 			var target = evt.getSource().data("target");
 			if (target) {
 				var animation = "slide";
-				// var animation = this.getView().byId("animationSelect").getSelectedKey();
-				// alert(this.getView().byId("animationSelect").getSelectedKey());
 				navCon.to(this.getView().byId(target), animation);
 			} else {
 				navCon.back();
@@ -44,14 +54,14 @@ sap.ui.define([
 
 
 		// onInit : function () {
-     //    // set data model on view
-     //   	var oData = {
-     //       	recipient : {
-     //       		name : "Bill"
-     //       	}
-     //   	};
-	    //    var oModel = new JSONModel(oData);
-	    //    this.getView().setModel(oModel);
+  //       // set data model on view
+  //      	var oData = {
+  //          	recipient : {
+  //          		name : "Bill"
+  //          	}
+  //      	};
+	 //       var oModel = new JSONModel(oData);
+	 //       this.getView().setModel(oModel);
 	    //    // set i18n model on view
 	    //    // var i18nModel = new ResourceModel({
      //    //   	bundleName: "utegation.i18n.i18n"

@@ -19,7 +19,7 @@ sap.ui.define([
 			var oUriParameters = jQuery.sap.getUriParameters();
 			MockServer.config({
 				autoRespond: true,
-				autoRespondAfter: oUriParameters.get("serverDelay") || 3000
+				autoRespondAfter: oUriParameters.get("serverDelay") || 1000
 			});
 
 			// simulate against the metadata and mock data
@@ -27,7 +27,11 @@ sap.ui.define([
 				sMockdataBaseUrl: "../localService/mockdata",
 				bGenerateMissingMockData: true
 			});
-
+			
+			
+			// var oModel = new sap.ui.model.odata.ODataModel("/", true);
+   //         sap.ui.getCore().setModel(oModel);
+			
 			// start
 			oMockServer.start();
 

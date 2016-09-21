@@ -3,6 +3,20 @@
    xmlns:core="sap.ui.core" >
    <Dialog
       title="Hello {/recipient/name}">
+      <List>
+         <InputListItem label="Address">
+   			<Input
+   				placeholder="Address"
+   				value="Enter Address" />
+   		</InputListItem>
+   		
+   		<InputListItem label="Phone">
+   			<Input
+   				placeholder="Phone"
+   				value="Enter Phone Number" />
+   		</InputListItem>
+   		
+		</List>
       <beginButton>
          <Button
             text="{i18n>dialogCloseButtonText}"
