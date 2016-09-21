@@ -5,7 +5,7 @@ sap.ui.define([
 ], function(Controller, MessageToast) {
 	"use strict";
 
-	return Controller.extend("sap.ui.utegation.controller.Gas", {
+	return Controller.extend("sap.ui.utegation.controller.Preference", {
 		/**
 		 * Responds to the button press event.
 		 * Upon pressing, we bind the items aggregation of the list to the "Meetups" entityset.

@@ -20,7 +20,6 @@
 			<Page
 				id="Gas"
 				title="Gas" >
-				<!--This is the nested view-->
 				<mvc:XMLView viewName="sap.ui.utegation.view.Gas"/>
 				<footer><Toolbar><Button text="Action 1" /></Toolbar></footer>
 			</Page>
@@ -35,8 +34,10 @@
 				<footer><Toolbar><Button text="Action 3" /></Toolbar></footer>
 			</Page>
 			<Page
-				id="Contacting_Preference"
-				title="Contacting Preference" >
+				id="Overview"
+				title="Overview" >
+				<!--This is the nested view-->
+				<mvc:XMLView viewName="sap.ui.utegation.view.Overview"/>
 				<footer><Toolbar><Button text="Action 4" /></Toolbar></footer>
 			</Page>
 		</NavContainer>
@@ -79,7 +80,7 @@
 				</customData>
 			</Button>
 			<Button
-				text="Contacting Preference"
+				text="Overview"
 				press="handleNav">
 				<layoutData>
 					<FlexItemData growFactor="1" />
@@ -87,7 +88,7 @@
 				<customData>
 					<core:CustomData
 						key="target"
-						value="Contacting_Preference" />
+						value="Overview" />
 				</customData>
 			</Button>
 		</HBox>

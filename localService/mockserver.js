@@ -19,7 +19,7 @@ sap.ui.define([
 			var oUriParameters = jQuery.sap.getUriParameters();
 			MockServer.config({
 				autoRespond: true,
-				autoRespondAfter: oUriParameters.get("serverDelay") || 1000
+				autoRespondAfter: oUriParameters.get("serverDelay") || 3000
 			});
 
 			// simulate against the metadata and mock data

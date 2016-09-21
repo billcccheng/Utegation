@@ -1,6 +1,11 @@
 [{
 	"UtilityID": 1,
 	"Title": "PaperLess",
-	"PaperLess" : true,
+	"OnorOff" : true,
 	"Description": "PaperLess options will...."
+},{
+	"UtilityID": 2,
+	"Title": "Email",
+	"OnorOff" : true,
+	"Description": "Email..."
 }]
