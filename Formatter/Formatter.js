@@ -4,7 +4,7 @@ sap.ui.define(function() {
 	var Formatter = {
 
 		status :  function (sStatus) {
-				if (sStatus === true) {
+				if (sStatus === 0) {
 					return "Success";
 				} else {
 					return "Warning";

@@ -29,12 +29,26 @@ sap.ui.define([
 			});
 			
 			
-			// var oModel = new sap.ui.model.odata.ODataModel("/", true);
-   //         sap.ui.getCore().setModel(oModel);
+			var oMockServerPayment = new MockServer({
+				rootUri: "/"
+			});
+			
+			var oUriParametersPayment = jQuery.sap.getUriParameters();
+			MockServer.config({
+				autoRespond: true,
+				autoRespondAfter: oUriParametersPayment.get("serverDelay") || 1000
+			});
+
+			// simulate against the metadata and mock data
+			oMockServerPayment.simulate("../localService/payments.xml", {
+				sMockdataBaseUrl: "../localService/mockdata",
+				bGenerateMissingMockData: true
+			});
+			
 			
 			// start
 			oMockServer.start();
-
+			oMockServerPayment.start();
 			jQuery.sap.log.info("Running the app with mock data");
 		}
 

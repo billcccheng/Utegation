@@ -12,36 +12,6 @@ sap.ui.define([
 		 * We pass a custom URL parameter "first=3" (assuming our OData BE knows how to process it).
 		 */
 		 
-		
-		onPressAction: function() {
-			var oList = this.getView().byId("list");
-			oList.bindItems({
-				path: "/data", //this reads mockdata/data.json
-				parameters: {
-					custom: {
-						first: "3"
-					}
-				},
-				template: new sap.m.ObjectListItem({
-					title: "{Title}",
-					number: {
-						path: 'EventDate',
-						type: 'sap.ui.model.type.DateTime',
-						formatOptions: {
-							style: 'medium'
-						}
-					},
-					attributes: [
-						new sap.m.ObjectAttribute({
-							text: "{Description}",
-						}),
-						new sap.m.ObjectAttribute({
-							text: "{ContactPhone}",
-						})
-					]
-				})
-			});
-		},
 		onHeaderSwitchChange: function (evt) {
 			MessageToast.show("Saved");
 		},
@@ -52,3 +22,5 @@ sap.ui.define([
 	});
 
 });
+
+

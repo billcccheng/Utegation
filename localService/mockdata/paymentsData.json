@@ -1,0 +1,11 @@
+[{
+	"UtilityID": 1,
+	"UtilityType": "Gas",
+	"Payments" : 100,
+	"Description": "Gas Payment"
+},{
+	"UtilityID": 2,
+	"UtilityType": "Water",
+	"Payments" : 0,
+	"Description": "Water Payment"
+}]

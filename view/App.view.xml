@@ -19,12 +19,12 @@
 			class="navContainerControl sapUiSmallMarginBottom">
 			<Page
 				id="Gas"
-				title="Gas" >
+				title="{i18n>GasHeader} Preference" >
 				<mvc:XMLView viewName="sap.ui.utegation.view.Gas"/>
 				<footer><Toolbar><Button
 									icon="sap-icon://simple-payment"
 							        text="Payment"
-							        press="onOpenGasPayment"
+							        press="onOpenGasDialog"
 							        class="sapUiSmallMarginEnd"/></Toolbar></footer>
 			</Page>
 			<Page

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema Namespace="NerdMeetup.Models"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+            <EntityType Name="AccountPayment">
+                <Key>
+                    <PropertyRef Name="UtilityID" />
+                </Key>
+                <Property Name="UtilityType" Type="Edm.String" Nullable="false" />
+                <Property Name="Payments" Type="Edm.Int32" Nullable="true" />
+                <!--Description is needed in list: I have no idea why-->
+                <Property Name="Description" Type="Edm.String" Nullable="true" />
+            </EntityType>
+            <!--<ComplexType Name="LocationDetail" />-->
+            <EntityContainer Name="Account" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="paymentsData" EntityType="Account.Models.AccountPayment" />
+                <FunctionImport Name="Account" EntitySet="Meetups" ReturnType="Collection(Account.Models.Meetup)" m:HttpMethod="GET" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -4,26 +4,26 @@
 	xmlns="sap.m"
 	xmlns:l="sap.ui.layout">
 
-	<List headerText="{i18n>OverviewText}" id="list" items="{/gasData}" noDataText="{i18n>noDataText}">
+	<List headerText="{i18n>OverviewText}" id="list" items="{/paymentsData}" noDataText="{i18n>noDataText}">
 
 		
 		<items>
 			<ObjectListItem 
-			  title="{Title}"
+			  title="{UtilityType}"
 				type="Active"
 				press="onListItemPress"
 			>
 				<firstStatus>
 					<ObjectStatus
-						text="{OnorOff}"
+						text="{Payments}"
 						state="{
-							path: 'OnorOff',
+							path: 'Payments',
 							formatter: 'sap.ui.utegation.Formatter.Formatter.status'
 						}" />
 				</firstStatus>
-				<attributes>
-					<ObjectAttribute text="{Description}"/>
-				</attributes>
+				<!--<attributes>-->
+				<!--	<ObjectAttribute text="{Description}"/>-->
+				<!--</attributes>-->
 			</ObjectListItem>
 		</items>
 	</List>
