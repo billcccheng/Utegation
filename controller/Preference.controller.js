@@ -7,6 +7,24 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("sap.ui.utegation.controller.Preference", {
+
+		onPaperLessSwitchChange: function (evt) {
+			this.byId("Gas").setVisible(evt.getSource().getState());
+		},
+		 
+		onPreferenceSwitchChange: function (evt) {
+			this.byId("listItemPartition")
+			MessageToast.show("Saved");
+		},
+		
+		onListItemPress: function (evt) {
+			MessageToast.show("Pressed : " + evt.getSource().getTitle());
+		}
+	});
+
+});
+
+
 		// onInit : function () {
   //  		var oModel = new JSONModel("https://api.myjson.com/bins/1xjvo");
   //      	console.log(oModel);
@@ -18,18 +36,7 @@ sap.ui.define([
 		// 	var oModel = new JSONModel("https://api.myjson.com/bins/seec");
   //      	oList.setModel(oModel);
 		// },
-		
-		 
-		onHeaderSwitchChange: function (evt) {
-			MessageToast.show("Saved");
-		},
-		
-		onListItemPress: function (evt) {
-			MessageToast.show("Pressed : " + evt.getSource().getTitle());
-		}
-	});
 
-});
 
 
 	// onInit : function () {

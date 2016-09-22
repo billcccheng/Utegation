@@ -1,10 +1,9 @@
-<core:View controllerName="sap.ui.utegation.controller.Preference"
-	xmlns:core="sap.ui.core" 
-	xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns="sap.m"
-	xmlns:l="sap.ui.layout">
-
-	<List headerText="{i18n>OverviewText}" id="overviewList" items="{/paymentsData}" noDataText="{i18n>noDataText}">
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <Dialog
+      title="Payments Due">
+      <List headerText="{Payments}" id="overviewList" items="{/paymentsData}" noDataText="{i18n>noDataText}">
 		<items>
 			<ObjectListItem 
 				title="{UtilityType}"
@@ -24,5 +23,10 @@
 			</ObjectListItem>
 		</items>
 	</List>
-	<!--<Button press="onPressFilter" text="Test"></Button>-->
-</core:View>
+      <beginButton>
+         <Button
+            text="{i18n>dialogCloseButtonText}"
+            press="onClosePaymentsDialog"/>
+      </beginButton>
+   </Dialog>
+</core:FragmentDefinition>

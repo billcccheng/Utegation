@@ -1,0 +1,20 @@
+<core:View controllerName="sap.ui.utegation.controller.Preference"
+	xmlns:core="sap.ui.core" 
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+   <List headerText="{i18n>SettingText}" noDataText="{i18n>noDataText}">
+      <InputListItem label="Address">
+			<Input
+				placeholder="Address"
+				value="Enter Address" />
+		</InputListItem>
+		
+		<InputListItem label="Phone">
+			<Input
+				placeholder="Phone"
+				value="Enter Phone Number" />
+		</InputListItem>
+		
+	</List>
+</core:View>

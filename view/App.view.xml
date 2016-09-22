@@ -3,12 +3,6 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
-	<Button
-		icon="sap-icon://action-settings"
-        text="{i18n>openDialogButtonText}"
-        press="onOpenDialog"
-        class="sapUiSmallMarginEnd"/>
-
 	<VBox
 		class="sapUiSmallMargin">
 
@@ -24,26 +18,43 @@
 				<footer><Toolbar><Button
 									icon="sap-icon://simple-payment"
 							        text="Payment"
-							        press="onOpenGasDialog"
+							        press="onOpenPaymentsDialog"
 							        class="sapUiSmallMarginEnd"/></Toolbar></footer>
 			</Page>
 			<Page
 				id="Water"
 				title="Water" >
-				<footer><Toolbar><Button text="Action 2" /></Toolbar></footer>
+				<footer><Toolbar><Button
+									icon="sap-icon://simple-payment"
+							        text="Payment"
+							        press="onOpenPaymentsDialog"
+							        class="sapUiSmallMarginEnd"/></Toolbar></footer>
 			</Page>
 			<Page
 				id="Electricity"
 				title="Electricity" >
-				<footer><Toolbar><Button text="Action 3" /></Toolbar></footer>
+				<footer><Toolbar><Button
+									icon="sap-icon://simple-payment"
+							        text="Payment"
+							        press="onOpenPaymentsDialog"
+							        class="sapUiSmallMarginEnd"/></Toolbar></footer>
 			</Page>
 			<Page
 				id="Overview"
 				title="Overview" >
 				<!--This is the nested view-->
 				<mvc:XMLView viewName="sap.ui.utegation.view.Overview"/>
-				<footer><Toolbar><Button text="Action 4" /></Toolbar></footer>
+				<footer><Toolbar></Toolbar></footer>
 			</Page>
+			<Page
+				id="Setting"
+				title="Setting" >
+				<!--This is the nested view-->
+				<mvc:XMLView viewName="sap.ui.utegation.view.Setting"/>
+				<footer><Toolbar></Toolbar></footer>
+			</Page>
+			
+			
 		</NavContainer>
 
 		<HBox>
@@ -95,6 +106,20 @@
 						value="Overview" />
 				</customData>
 			</Button>
+			<Button
+				icon="sap-icon://action-settings"
+				text="Setting"
+				press="handleNav">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+				<customData>
+					<core:CustomData
+						key="target"
+						value="Setting" />
+				</customData>
+			</Button>
+			
 		</HBox>
 
 		<HBox>

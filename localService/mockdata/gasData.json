@@ -1,9 +1,4 @@
 [{
-	"UtilityID": 1,
-	"Title": "PaperLess",
-	"OnorOff" : true,
-	"Description": "PaperLess options will...."
-},{
 	"UtilityID": 2,
 	"Title": "Email",
 	"OnorOff" : false,

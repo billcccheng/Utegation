@@ -1,15 +1,19 @@
 <mvc:View 
-  controllerName="sap.ui.utegation.controller.Preference"
-  xmlns:l="sap.ui.layout"
+    controllerName="sap.ui.utegation.controller.Preference"
+    xmlns:l="sap.ui.layout"
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
+    <Label text="Paperless" id="paperLess"/>
+    <Switch
+        state="true"
+        change="onPaperLessSwitchChange"
+        class="sapUiSmallMarginBottom"/>
     <List headerText=" " id="Gas" items="{/gasData}">
-      
   		<InputListItem label="{Title}">
   			 <Switch 
       		state="{OnorOff}"
-      		change="onHeaderSwitchChange"/>
+      		change="onPreferenceSwitchChange"/>
   		</InputListItem>
   	</List>
 </mvc:View>

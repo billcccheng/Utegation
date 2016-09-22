@@ -17,34 +17,34 @@ sap.ui.define([
 				navCon.back();
 			}
 		},
-		_getDialog : function () {
-	        if (!this._oDialog) {
-	            this._oDialog = sap.ui.xmlfragment("sap.ui.utegation.view.Setting", this);
-	            this.getView().addDependent(this._oDialog);
-			}
-	         return this._oDialog;
-	    },
-	    onOpenDialog : function () {
-	    	this._getDialog().open();
-	    },
-	    onCloseDialog : function () {
-	    	this._getDialog().close();
-		},
+		// _getDialog : function () {
+	 //       if (!this._oDialog) {
+	 //           this._oDialog = sap.ui.xmlfragment("sap.ui.utegation.view.Setting", this);
+	 //           this.getView().addDependent(this._oDialog);
+		// 	}
+	 //        return this._oDialog;
+	 //   },
+	 //   onOpenDialog : function () {
+	 //   	this._getDialog().open();
+	 //   },
+	 //   onCloseDialog : function () {
+	 //   	this._getDialog().close();
+		// },
 		
 		
 		
-		onOpenGasPayment : function () {
+		onOpenPayment : function () {
 			if (!this._oDialog) {
-	            this._oDialog = sap.ui.xmlfragment("sap.ui.utegation.view.GasPayment", this);
+	            this._oDialog = sap.ui.xmlfragment("sap.ui.utegation.view.Payments", this);
 	            this.getView().addDependent(this._oDialog);
 			}
 	         return this._oDialog;
 		},
-		onOpenGasDialog : function () {
-	    	this.onOpenGasPayment().open();
+		onOpenPaymentsDialog : function () {
+	    	this.onOpenPayment().open();
 	    },
-	    onCloseGasDialog : function () {
-	    	this.onOpenGasPayment().close();
+	    onClosePaymentsDialog : function () {
+	    	this.onOpenPayment().close();
 		},
 		
 	});
