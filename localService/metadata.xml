@@ -13,17 +13,8 @@
                 </Key>
                 <Property Name="UtilityID" Type="Edm.Int32" Nullable="false" />
                 <Property Name="Title" Type="Edm.String" Nullable="true" />
-                <!--<Property Name="Description" Type="Edm.String" Nullable="true" />-->
+                <Property Name="Description" Type="Edm.String" Nullable="true" />
                 <!--<Property Name="Payments" Type="Edm.String" Nullable="true" />-->
-                <!--<Property Name="EventDate" Type="Edm.DateTime" Nullable="false" />-->
-                <!--<Property Name="ContactPhone" Type="Edm.String" Nullable="true" />-->
-                <!--<Property Name="HostedBy" Type="Edm.String" Nullable="true" />-->
-                <!--<Property Name="Address" Type="Edm.String" Nullable="true" />-->
-                <!--<Property Name="Country" Type="Edm.String" Nullable="true" />-->
-                <!--<Property Name="Latitude" Type="Edm.Double" Nullable="false" />-->
-                <!--<Property Name="Longitude" Type="Edm.Double" Nullable="false" />-->
-                <!--<Property Name="HostedById" Type="Edm.String" Nullable="true" />-->
-                <!--<Property Name="Location" Type="NerdMeetup.Models.LocationDetail" Nullable="false" />-->
             </EntityType>
             <!--<ComplexType Name="LocationDetail" />-->
             <EntityContainer Name="Account" m:IsDefaultEntityContainer="true">

@@ -1,16 +1,24 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/m/MessageToast",
+	"sap/ui/model/json/JSONModel",
 	"../Formatter/Formatter",
-], function(Controller, MessageToast) {
+], function(Controller, MessageToast, JSONModel) {
 	"use strict";
 
 	return Controller.extend("sap.ui.utegation.controller.Preference", {
-		/**
-		 * Responds to the button press event.
-		 * Upon pressing, we bind the items aggregation of the list to the "Meetups" entityset.
-		 * We pass a custom URL parameter "first=3" (assuming our OData BE knows how to process it).
-		 */
+		// onInit : function () {
+  //  		var oModel = new JSONModel("https://api.myjson.com/bins/1xjvo");
+  //      	console.log(oModel);
+  //      	// var oList = this.getView().byId("overviewList");
+  //      	this.getView().setModel(oModel);
+		// },
+		// onPressFilter: function() {
+		// 	var oList = this.getView().byId("overviewList");
+		// 	var oModel = new JSONModel("https://api.myjson.com/bins/seec");
+  //      	oList.setModel(oModel);
+		// },
+		
 		 
 		onHeaderSwitchChange: function (evt) {
 			MessageToast.show("Saved");
@@ -24,3 +32,60 @@ sap.ui.define([
 });
 
 
+	// onInit : function () {
+ //   		var data = {"test": [{
+	// 			"UtilityID": 1,
+	// 			"Title": "PaperLess",
+	// 			"OnorOff" : true,
+	// 			"Description": "PaperLess options will...."
+	// 		},{
+	// 			"UtilityID": 2,
+	// 			"Title": "Email",
+	// 			"OnorOff" : false,
+	// 			"Description": "Email..."
+	// 		},{
+	// 			"UtilityID": 3,
+	// 			"Title": "Phone",
+	// 			"OnorOff" : true,
+	// 			"Description": "Phone..."
+	// 		},{
+	// 			"UtilityID": 4,
+	// 			"Title": "Text",
+	// 			"OnorOff" : true,
+	// 			"Description": "Text..."
+	// 		}]};
+ //   		var oModel = new JSONModel();
+ //   		oModel.setData(data);
+ //       	console.log(oModel);
+ //       	this.getView().setModel(oModel);
+	// 	},
+	
+	
+	
+	// onPressFilter: function() {
+		// 	var oList = this.getView().byId("overviewList");
+		// 	var oModel = new JSONModel("https://api.myjson.com/bins/seec");
+  //      	oList.setModel(oModel);
+			// oList.bindItems({
+			// 	path: "/paymentsData",
+			// 	parameters: {
+			// 		custom: {
+			// 			filter: "Title eq 'PaperLess'"
+			// 		}
+			// 	},
+			// 	template: new sap.m.ObjectListItem({
+			// 		title: "{UtilityType}",
+			// 		firstStatus: [
+			// 			new sap.m.ObjectStatus({
+			// 				text:"{Payments}",
+			// 				state:"{ path: 'Payments', formatter: 'sap.ui.utegation.Formatter.Formatter.status'}"
+			// 			})
+			// 		],
+			// 		attributes: [
+			// 			new sap.m.ObjectAttribute({
+			// 				text: "{Description}"
+			// 			})
+			// 		]
+			// 	})
+			// });
+		// },

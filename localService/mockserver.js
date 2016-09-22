@@ -33,17 +33,21 @@ sap.ui.define([
 				rootUri: "/"
 			});
 			
-			var oUriParametersPayment = jQuery.sap.getUriParameters();
-			MockServer.config({
-				autoRespond: true,
-				autoRespondAfter: oUriParametersPayment.get("serverDelay") || 1000
-			});
-
-			// simulate against the metadata and mock data
+			// Mock Server for All Payments (Gas, Water, Electricity)
 			oMockServerPayment.simulate("../localService/payments.xml", {
 				sMockdataBaseUrl: "../localService/mockdata",
 				bGenerateMissingMockData: true
 			});
+			
+			// MockServer ignores parameter
+			// var fnCustom = function(oEvent) {
+			// 	var oXhr = oEvent.getParameter("oXhr");
+			// 	if (oXhr && oXhr.url.indexOf("filter") > -1) {
+			// 		oEvent.getParameter("oFilteredData").results.splice(1, 100);
+			// 	}
+			// };
+			
+			// oMockServerPayment.attachAfter("GET", fnCustom, "paymentsData");
 			
 			
 			// start

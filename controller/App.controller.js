@@ -6,19 +6,7 @@ sap.ui.define([
 ],function(MessageToast, Controller, JSONModel, ResourceModel) {
 	"use strict";
 	var CController = Controller.extend("sap.ui.utegation.controller.App", {
-		
-		// onInit : function () {
-  //       // set data model on view
-  //      	var oData = {
-  //          	recipient : {
-  //          		name : "Bill"
-  //          	}
-  //      	};
-	 //       var oModel = new JSONModel(oData);
-	 //       this.getView().setModel(oModel);
-		// },
-		
-		
+
 		handleNav: function(evt) {
 			var navCon = this.getView().byId("navCon");
 			var target = evt.getSource().data("target");

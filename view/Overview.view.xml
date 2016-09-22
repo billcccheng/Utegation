@@ -4,15 +4,12 @@
 	xmlns="sap.m"
 	xmlns:l="sap.ui.layout">
 
-	<List headerText="{i18n>OverviewText}" id="list" items="{/paymentsData}" noDataText="{i18n>noDataText}">
-
-		
+	<List headerText="{i18n>OverviewText}" id="overviewList" items="{/paymentsData}" noDataText="{i18n>noDataText}">
 		<items>
 			<ObjectListItem 
-			  title="{UtilityType}"
+				title="{UtilityType}"
 				type="Active"
-				press="onListItemPress"
-			>
+				press="onListItemPress">
 				<firstStatus>
 					<ObjectStatus
 						text="{Payments}"
@@ -21,11 +18,11 @@
 							formatter: 'sap.ui.utegation.Formatter.Formatter.status'
 						}" />
 				</firstStatus>
-				<!--<attributes>-->
-				<!--	<ObjectAttribute text="{Description}"/>-->
-				<!--</attributes>-->
+				<attributes>
+					<ObjectAttribute text="{Description}"/>
+				</attributes>
 			</ObjectListItem>
 		</items>
 	</List>
-	<!--<Button press="onPressAction" text="{i18n>loadFirstItems}"></Button>-->
+	<!--<Button press="onPressFilter" text="Test"></Button>-->
 </core:View>

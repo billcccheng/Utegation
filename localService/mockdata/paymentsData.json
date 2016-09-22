@@ -8,4 +8,14 @@
 	"UtilityType": "Water",
 	"Payments" : 0,
 	"Description": "Water Payment"
+},{
+	"UtilityID": 3,
+	"UtilityType": "Electricity",
+	"Payments" : 0,
+	"Description": "Electricity Payment"
+},{
+	"UtilityID": 4,
+	"UtilityType": "Cable",
+	"Payments" : 0,
+	"Description": "Cable Payment"
 }]

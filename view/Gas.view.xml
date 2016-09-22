@@ -4,7 +4,8 @@
 	xmlns:core="sap.ui.core"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
-    <List headerText=" " items="{/gasData}">
+    <List headerText=" " id="Gas" items="{/gasData}">
+      
   		<InputListItem label="{Title}">
   			 <Switch 
       		state="{OnorOff}"
