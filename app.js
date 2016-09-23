@@ -15,7 +15,7 @@ oApp.use(bodyParser.urlencoded({extended: false}));
 oApp.use(bodyParser.json());
 
 // "static" resources 
-oApp.use(express.static(__dirname + '/utegation/client/webapp'));  
+oApp.use(express.static(__dirname + '/client/webapp'));  
 
 // connect to mongodb
 require('./server/db/mongo-connect.js')(oAppEnv);

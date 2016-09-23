@@ -9,6 +9,6 @@ let userSchema = mongoose.Schema({
     first_name: String
 });
 
-let User = mongoose.model('User', userSchema);
+let User = mongoose.model('user', userSchema);
 
 module.exports = User;

@@ -3,7 +3,34 @@
 module.exports = function (oApp) {
 
     let User = require('../../db/models/user.js');
-
+    
+    var chris = new User({
+      id: 1,
+      user_name: 'sevilayha',
+      last_name: 'lupa',
+      first_name: 'Kan',
+    });
+    
+    var a = new User({
+      id: 2,
+      user_name: 'sevilayha',
+      last_name: 'lupa',
+      first_name: 'Kan',
+    });
+    
+    
+    chris.save(function(err) {
+      if (err) throw err;
+    
+      console.log('User saved successfully!');
+    });
+    
+    a.save(function(err) {
+      if (err) throw err;
+    
+      console.log('User saved successfully!');
+    });
+    
     oApp.get('/api/user', function (req, res) {
         User.find(function (err, users) {
             if (err) {
@@ -37,7 +64,7 @@ module.exports = function (oApp) {
     });
 
     oApp.post('/api/user', function (req, res) {
-        console.log(req.body);
+        
         new User({
             id: req.body.id,
             user_name: req.body.user_name,
