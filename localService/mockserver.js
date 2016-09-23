@@ -12,7 +12,7 @@ sap.ui.define([
 		 */
 		init: function() {
 			// create
-			var oMockServer = new MockServer({
+			var oMockServerGas = new MockServer({
 				rootUri: "/"
 			});
 			
@@ -23,18 +23,39 @@ sap.ui.define([
 			});
 
 			// simulate against the metadata and mock data
-			oMockServer.simulate("../localService/metadata.xml", {
+			oMockServerGas.simulate("../localService/gasmetadata.xml", {
 				sMockdataBaseUrl: "../localService/mockdata",
 				bGenerateMissingMockData: true
 			});
 			
 			
+			var oMockServerWater = new MockServer({
+				rootUri: "/"
+			});
+			
+			oMockServerWater.simulate("../localService/watermetadata.xml", {
+				sMockdataBaseUrl: "../localService/mockdata",
+				bGenerateMissingMockData: true
+			});
+			
+			
+			var oMockServerElectricity = new MockServer({
+				rootUri: "/"
+			});
+			
+			oMockServerElectricity.simulate("../localService/electricitymetadata.xml", {
+				sMockdataBaseUrl: "../localService/mockdata",
+				bGenerateMissingMockData: true
+			});
+			
+			
+			
+			// Mock Server for All Payments (Gas, Water, Electricity)
 			var oMockServerPayment = new MockServer({
 				rootUri: "/"
 			});
 			
-			// Mock Server for All Payments (Gas, Water, Electricity)
-			oMockServerPayment.simulate("../localService/payments.xml", {
+			oMockServerPayment.simulate("../localService/paymentsmetadata.xml", {
 				sMockdataBaseUrl: "../localService/mockdata",
 				bGenerateMissingMockData: true
 			});
@@ -51,7 +72,9 @@ sap.ui.define([
 			
 			
 			// start
-			oMockServer.start();
+			oMockServerGas.start();
+			oMockServerWater.start();
+			oMockServerElectricity.start();
 			oMockServerPayment.start();
 			jQuery.sap.log.info("Running the app with mock data");
 		}

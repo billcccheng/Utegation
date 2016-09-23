@@ -8,9 +8,18 @@ sap.ui.define([
 
 	return Controller.extend("sap.ui.utegation.controller.Preference", {
 
-		onPaperLessSwitchChange: function (evt) {
+		onGasPaperLessSwitchChange: function (evt) {
 			this.byId("Gas").setVisible(evt.getSource().getState());
 		},
+		
+		onWaterPaperLessSwitchChange: function (evt) {
+			this.byId("Water").setVisible(evt.getSource().getState());
+		},
+		
+		onElectricityPaperLessSwitchChange: function (evt) {
+			this.byId("Electricity").setVisible(evt.getSource().getState());
+		},
+		
 		 
 		onPreferenceSwitchChange: function (evt) {
 			this.byId("listItemPartition")

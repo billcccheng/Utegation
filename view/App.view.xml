@@ -24,6 +24,7 @@
 			<Page
 				id="Water"
 				title="Water" >
+				<mvc:XMLView viewName="sap.ui.utegation.view.Water"/>
 				<footer><Toolbar><Button
 									icon="sap-icon://simple-payment"
 							        text="Payment"
@@ -33,6 +34,7 @@
 			<Page
 				id="Electricity"
 				title="Electricity" >
+				<mvc:XMLView viewName="sap.ui.utegation.view.Electricity"/>
 				<footer><Toolbar><Button
 									icon="sap-icon://simple-payment"
 							        text="Payment"

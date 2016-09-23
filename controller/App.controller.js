@@ -22,7 +22,7 @@ sap.ui.define([
 	 //           this._oDialog = sap.ui.xmlfragment("sap.ui.utegation.view.Setting", this);
 	 //           this.getView().addDependent(this._oDialog);
 		// 	}
-	 //        return this._oDialog;
+	 //        return this._oDialog;u    
 	 //   },
 	 //   onOpenDialog : function () {
 	 //   	this._getDialog().open();

@@ -7,9 +7,9 @@
     <Label text="Paperless" class="paperLess"/>
     <Switch
         state="true"
-        change="onGasPaperLessSwitchChange"
+        change="onWaterPaperLessSwitchChange"
         class="sapUiSmallMarginBottom"/>
-    <List headerText=" " id="Gas" items="{/gasData}">
+    <List headerText=" " id="Water" items="{/waterData}">
   		<InputListItem label="{Title}">
   			 <Switch 
       		state="{OnorOff}"
