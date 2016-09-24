@@ -9,7 +9,7 @@
         state="true"
         change="onElectricityPaperLessSwitchChange"
         class="sapUiSmallMarginBottom"/>
-    <List headerText=" " id="Electricity" items="{/waterData}">
+    <List headerText=" " id="Electricity" items="{/Electricity}">
   		<InputListItem label="{Title}">
   			 <Switch 
       		state="{OnorOff}"

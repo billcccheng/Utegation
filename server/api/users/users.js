@@ -10,14 +10,7 @@ module.exports = function (oApp) {
       last_name: 'lupa',
       first_name: 'Kan',
     });
-    
-    var a = new User({
-      id: 2,
-      user_name: 'sevilayha',
-      last_name: 'lupa',
-      first_name: 'Kan',
-    });
-    
+
     
     chris.save(function(err) {
       if (err) throw err;
@@ -25,12 +18,7 @@ module.exports = function (oApp) {
       console.log('User saved successfully!');
     });
     
-    a.save(function(err) {
-      if (err) throw err;
-    
-      console.log('User saved successfully!');
-    });
-    
+
     oApp.get('/api/user', function (req, res) {
         User.find(function (err, users) {
             if (err) {

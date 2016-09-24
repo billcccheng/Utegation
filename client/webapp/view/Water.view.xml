@@ -9,7 +9,7 @@
         state="true"
         change="onWaterPaperLessSwitchChange"
         class="sapUiSmallMarginBottom"/>
-    <List headerText=" " id="Water" items="{/waterData}">
+    <List headerText=" " id="Water" items="{/Water}">
   		<InputListItem label="{Title}">
   			 <Switch 
       		state="{OnorOff}"

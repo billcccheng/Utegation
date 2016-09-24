@@ -6,20 +6,14 @@ sap.ui.define([
 ], function(Controller, MessageToast, JSONModel) {
 	"use strict";
 
-	return Controller.extend("sap.ui.utegation.controller.Payment", {
+	return Controller.extend("sap.ui.utegation.controller.Utility", {
+
 		onInit : function () {
     		var oModel = new JSONModel("/api/payment");
+        	// console.log(oModel);
+        	// var oList = this.getView().byId("overviewList");
         	this.getView().setModel(oModel);
 		},
-		
-		 
-		onHeaderSwitchChange: function (evt) {
-			MessageToast.show("Saved");
-		},
-		
-		onListItemPress: function (evt) {
-			MessageToast.show("Pressed : " + evt.getSource().getTitle());
-		}
 	});
 
 });

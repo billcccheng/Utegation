@@ -26,7 +26,7 @@ require('./client/routes/routes.js')(oApp);
 // api
 // require('./server/api/info/info.js')(oApp, oAppEnv);
 require('./server/api/users/users.js')(oApp);
-
+require('./server/api/payments/payments.js')(oApp);
 
 // express app listener
 oApp.listen(oAppEnv.port, function(){
